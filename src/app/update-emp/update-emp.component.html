@@ -1,0 +1,37 @@
+
+
+<div class="container" *ngIf="showEmpId">
+   
+  <form>
+    <div class="form-group">
+        <label for="update">Enter Employee ID</label>
+        <input type="number" class="form-control" id="update">
+    </div>
+    <button class="btn-save btn btn-success btn-sm" (click)="showUpdateEmpForm()">Submit</button>
+    </form>  
+</div>  
+<div class="container" *ngIf="showUpdateForm">
+<form>
+<table class="table table-hover">
+<tr>
+    <th>Emp Name</th>
+    <td><input value="Utkarsh Gupta" [disabled]="enableNameEdit" ></td>
+    <td><button (click)="edit(1)">Edit</button></td>
+  </tr>
+  <tr>
+    <th>Contact Number</th>
+    <td><input value="555 77 854" [disabled]="enableContactEdit"></td>
+    <td><button (click)="edit(2)" >Edit</button></td>
+  </tr>
+  <tr>
+    <th>Email-id</th>
+    <td><input value="utkarshgupta261@gmail.com" [disabled]="enableEmailEdit"></td>
+    <td><button (click)="edit(3)" >Edit</button></td>
+  </tr>
+</table>
+</form>
+<div class="form-group">
+  <button class="btn-save btn btn-primary" (click)="back()">Back</button>
+<button class="btn-save btn btn-success float-right">Update</button>
+</div>
+</div>
